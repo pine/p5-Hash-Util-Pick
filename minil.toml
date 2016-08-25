@@ -1,0 +1,6 @@
+name = "Hash-Util-Pick"
+# badges = ["travis"]
+authority="cpan:PINE"
+
+module_maker="ModuleBuildTiny"
+
