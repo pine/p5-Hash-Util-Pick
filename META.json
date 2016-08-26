@@ -1,12 +1,12 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "The non-destructive utilities for picking hash",
    "author" : [
-      "Pine Mizune <pinemz@gmail.com>"
+      "Pine Mizune"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.0.2, CPAN::Meta::Converter version 2.150005",
    "license" : [
-      "perl_5"
+      "mit"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -47,12 +47,27 @@
       },
       "test" : {
          "requires" : {
+            "Test::Deep" : "1.120",
             "Test::More" : "0.98"
          }
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/pine/p5-Hash-Util-Pick/issues"
+      },
+      "homepage" : "https://github.com/pine/p5-Hash-Util-Pick",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/pine/p5-Hash-Util-Pick.git",
+         "web" : "https://github.com/pine/p5-Hash-Util-Pick"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:PINE",
+   "x_contributors" : [
+      "Pine Mizune <pinemz@gmail.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27203"
 }
