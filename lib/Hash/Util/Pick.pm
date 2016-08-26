@@ -18,22 +18,49 @@ __END__
 
 =head1 NAME
 
-Hash::Util::Pick - It's new $module
+Hash::Util::Pick - The non-destructive utilities for picking hash
 
 =head1 SYNOPSIS
 
-    use Hash::Util::Pick;
+    use feature qw/say/;
+    use Hash::Util::Pick qw/pick/;
+
+    my $src = {
+        foo => 0,
+        bar => 1,
+        baz => 2,
+    };
+
+    my $dest = pick $hash => qw/foo bar/;
+    say join(' ', keys %$dest); # => foo bar
 
 =head1 DESCRIPTION
 
-Hash::Util::Pick is ...
+Hash::Util::Pick is the non-destructive utilities for picking hash
 
 =head1 LICENSE
 
-Copyright (C) Pine Mizune.
+The MIT License (MIT)
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+Copyright (c) 2016 Pine Mizune
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 =head1 AUTHOR
 
