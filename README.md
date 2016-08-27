@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/pine/p5-Hash-Util-Pick.svg?branch=master)](https://travis-ci.org/pine/p5-Hash-Util-Pick)
 # NAME
 
 Hash::Util::Pick - The non-destructive utilities for picking hash
@@ -60,4 +61,4 @@ THE SOFTWARE.
 
 # AUTHOR
 
-Pine Mizune &lt;pinemz@gmail.com>
+Pine Mizune <pinemz@gmail.com>
