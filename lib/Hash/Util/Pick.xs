@@ -52,7 +52,7 @@ PPCODE:
     I32 gimme = G_SCALAR;
 
     HV *src = (HV*)SvRV(ST(0));
-    CV *code =  sv_2cv(SvRV(ST(1)), &stash, &gv, 0);
+    CV *code = sv_2cv(SvRV(ST(1)), &stash, &gv, 0);
 
     char *hkey;
     I32 hkeylen;
