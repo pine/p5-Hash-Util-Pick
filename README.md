@@ -14,11 +14,25 @@ Hash::Util::Pick - The non-destructive utilities for picking hash
     };
 
     my $dest = pick $hash => qw/foo bar/;
-    say join(' ', keys %$dest); # => foo bar
+    # => { foo => 0, bar => 1 }
 
 # DESCRIPTION
 
 Hash::Util::Pick is the non-destructive utilities for picking hash
+
+# METHODS
+
+## `pick(\%hash, @keys)`
+Create hash reference picked by special keys.
+
+    pick { foo => 0, bar => 1 } => qw/foo/;
+    # => { foo => 0 }
+
+## `pick_by(\%hash, \&predicate)`
+Create hash reference picked by bloc block.
+
+    pick_by { foo => 0, bar => 1 } => sub { $_ > 0 };
+    # => { bar => 1 }
 
 # LICENSE
 
