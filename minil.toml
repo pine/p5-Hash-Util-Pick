@@ -1,6 +1,7 @@
 name = "Hash-Util-Pick"
-# badges = ["travis"]
+badges = ["travis"]
 authority="cpan:PINE"
+license="mit"
 
 module_maker="ModuleBuildTiny"
 
