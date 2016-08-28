@@ -34,3 +34,6 @@ lib/Hash/Util/Pick.c
 !lib/Hash/Util/ppport.h
 
 temp
+
+/src/ppport.h
+/src/xshelper.h

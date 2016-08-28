@@ -1,7 +1,9 @@
 name = "Hash-Util-Pick"
 badges = ["travis"]
-authority="cpan:PINE"
-license="mit"
+authority = "cpan:PINE"
+license = "mit"
 
-module_maker="ModuleBuildTiny"
+module_maker = 'ModuleBuild'
 
+[build]
+build_class = 'builder::MyBuilder'

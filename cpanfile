@@ -17,3 +17,8 @@ on 'develop' => sub {
     requires 'Test::Spellunker', '0.4.0';
     requires 'Version::Next', '1.000';
 };
+
+on configure => sub {
+    requires 'Module::Build::XSUtil', '0.16';
+};
+
