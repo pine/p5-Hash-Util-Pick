@@ -35,8 +35,8 @@ my %args = (
     },
 
     test_requires => {
-        'Test::More' => '0.98',
         'Test::Deep' => '1.120',
+        'Test::More' => '0.98',
     },
 
     name            => 'Hash-Util-Pick',
