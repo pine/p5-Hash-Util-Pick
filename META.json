@@ -42,7 +42,7 @@
             "Test::MinimumVersion::Fast" : "0.04",
             "Test::PAUSE::Permissions" : "0.05",
             "Test::Perl::Critic" : "1.03",
-            "Test::Pod" : "1.41",
+            "Test::Pod" : "1.51",
             "Test::Spellunker" : "v0.4.0",
             "Version::Next" : "1.000"
          }
@@ -71,7 +71,7 @@
          "web" : "https://github.com/pine/p5-Hash-Util-Pick"
       }
    },
-   "version" : "0.03",
+   "version" : "0.05",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "Pine Mizune <pinemz@gmail.com>"
