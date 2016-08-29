@@ -14,6 +14,7 @@ on 'develop' => sub {
     requires 'Test::MinimumVersion::Fast', '0.04';
     requires 'Test::PAUSE::Permissions', '0.05';
     requires 'Test::Perl::Critic', '1.03';
+    requires 'Test::Pod', '1.51';
     requires 'Test::Spellunker', '0.4.0';
     requires 'Version::Next', '1.000';
 };
