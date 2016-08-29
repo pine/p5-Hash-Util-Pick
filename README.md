@@ -14,7 +14,7 @@ Hash::Util::Pick - The non-destructive utilities for picking hash
         baz => 2,
     };
 
-    my $dest = pick $src => qw/foo bar/;
+    my $dest = pick $hash => qw/foo bar/;
     # => { foo => 0, bar => 1 }
 
 # DESCRIPTION
