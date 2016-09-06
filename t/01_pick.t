@@ -2,6 +2,8 @@ use strict;
 use warnings;
 use utf8;
 
+use Hash::Util qw/lock_keys/;
+
 use Test::More;
 use Test::Deep;
 
@@ -26,7 +28,16 @@ subtest basic => sub {
         cmp_deeply pick($hash, qw//), {};
         cmp_deeply pick($hash, qw/foo/), { foo => 0 };
         cmp_deeply pick($hash, qw/foo bar/), { foo => 0, bar => 1 };
-    }
+    };
+
+    subtest 'restricted hash' => sub {
+        my %hash = ( foo => 0 );
+        lock_keys(%hash);
+
+        cmp_deeply pick(\%hash, qw//), {};
+        cmp_deeply pick(\%hash, qw/foo/), { foo => 0 };
+        cmp_deeply pick(\%hash, qw/foo bar/), { foo => 0 };
+    };
 };
 
 done_testing;

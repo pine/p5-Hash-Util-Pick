@@ -30,10 +30,12 @@ PPCODE:
     HV *dest = (HV*)sv_2mortal((SV*)newHV());
 
     for (i = 1; i < items; ++i) {
-        HE *he = hv_fetch_ent(src, args[i], 0, 0);
-        if (he) {
-            SV *v = HeVAL(he);
-            hv_store_ent(dest, args[i], v, 0);
+        if (hv_exists_ent(src, args[i], 0)) {
+            HE *he = hv_fetch_ent(src, args[i], 0, 0);
+            if (he) {
+                SV *v = HeVAL(he);
+                hv_store_ent(dest, args[i], v, 0);
+            }
         }
     }
 
