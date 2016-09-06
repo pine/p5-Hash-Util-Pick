@@ -24,7 +24,8 @@ PROTOTYPE: $@
 PPCODE:
 {
     SV **args = &PL_stack_base[ax];
-    HV *src = (HV*)SvRV(args[0]);
+    HV *src = SvROK(args[0]) ?
+        (HV*)SvRV(args[0]) : (HV*)sv_2mortal((SV*)newHV());
 
     I32 i;
     HV *dest = (HV*)sv_2mortal((SV*)newHV());
@@ -53,7 +54,13 @@ PPCODE:
     HV *stash;
     I32 gimme = G_SCALAR;
 
-    HV *src = (HV*)SvRV(ST(0));
+    HV *src = SvROK(ST(0)) ?
+        (HV*)SvRV(ST(0)) : (HV*)sv_2mortal((SV*)newHV());
+
+    if (!SvROK(ST(1)) || SvTYPE((SV*)SvRV(ST(1))) != SVt_PVCV) {
+        croak("second argument must be code reference");
+    }
+
     CV *code = sv_2cv(SvRV(ST(1)), &stash, &gv, 0);
 
     char *hkey;

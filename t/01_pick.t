@@ -38,6 +38,12 @@ subtest basic => sub {
         cmp_deeply pick(\%hash, qw/foo/), { foo => 0 };
         cmp_deeply pick(\%hash, qw/foo bar/), { foo => 0 };
     };
+
+    subtest 'undef value' => sub {
+        cmp_deeply pick(undef, qw//), {};
+        cmp_deeply pick(undef, qw/foo/), {};
+        cmp_deeply pick(undef, qw/foo bar/), {};
+    };
 };
 
 done_testing;
