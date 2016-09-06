@@ -72,7 +72,7 @@
          "web" : "https://github.com/pine/p5-Hash-Util-Pick"
       }
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "Pine Mizune <pinemz@gmail.com>"

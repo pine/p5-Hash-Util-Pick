@@ -2,6 +2,9 @@ Revision history for Perl extension Hash-Util-Pick
 
 {{$NEXT}}
 
+0.06 2016-09-06T14:59:11Z
+    - change to dereference safely
+
 0.05 2016-08-29T13:43:29Z
     - fix readme sample code
 
