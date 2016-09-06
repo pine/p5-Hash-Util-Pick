@@ -34,6 +34,7 @@ Create hash reference picked by special keys.
 Create hash reference picked by bloc block.
 
     pick_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { bar => 1 }
+    pick_by { foo => 0, bar => 1 } => undef; # { }
 
 # LICENSE
 

@@ -38,11 +38,10 @@ subtest success => sub {
         cmp_deeply pick_by(undef, sub { 0 }), {};
         cmp_deeply pick_by(undef, sub { 1 }), {};
     };
-};
 
-subtest failure => sub {
     subtest 'non coderef' => sub {
-        dies_ok { pick_by({}, undef) };
+        cmp_deeply pick_by({}, undef), {};
+        cmp_deeply pick_by({ foo => 1 }, undef), {};
     };
 };
 

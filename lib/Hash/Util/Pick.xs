@@ -58,7 +58,8 @@ PPCODE:
         (HV*)SvRV(ST(0)) : (HV*)sv_2mortal((SV*)newHV());
 
     if (!SvROK(ST(1)) || SvTYPE((SV*)SvRV(ST(1))) != SVt_PVCV) {
-        croak("second argument must be code reference");
+        XPUSHs(newRV_noinc((SV*)newHV()));
+        XSRETURN(1);
     }
 
     CV *code = sv_2cv(SvRV(ST(1)), &stash, &gv, 0);
