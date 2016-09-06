@@ -43,14 +43,14 @@ Hash::Util::Pick is the non-destructive utilities for picking hash
 =head2 C<pick(\%hash, @keys)>
 Create hash reference picked by special keys.
 
-    pick { foo => 0, bar => 1 } => qw/foo/;
-    # => { foo => 0 }
+    pick { } => qw/foo/; # { }
+    pick { foo => 0 } => qw/bar/; # { }
+    pick { foo => 0, bar => 1 } => qw/foo/; # { foo => 0 }
 
 =head2 C<pick_by(\%hash, \&predicate)>
 Create hash reference picked by bloc block.
 
-    pick_by { foo => 0, bar => 1 } => sub { $_ > 0 };
-    # => { bar => 1 }
+    pick_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { bar => 1 }
 
 =head1 LICENSE
 
