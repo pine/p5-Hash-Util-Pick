@@ -1,5 +1,5 @@
 name = "Hash-Util-Pick"
-badges = ["travis"]
+badges = ["travis", "appveyor"]
 authority = "cpan:PINE"
 license = "mit"
 
