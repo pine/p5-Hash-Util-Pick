@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.06";
+our $VERSION = "0.10";
 
 use Exporter qw/import/;
 our @EXPORT_OK = qw/
