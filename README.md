@@ -31,9 +31,21 @@ Create hash reference picked by special keys.
     pick { foo => 0, bar => 1 } => qw/foo/; # { foo => 0 }
 
 ## `pick_by(\%hash, \&predicate)`
-Create hash reference picked by bloc block.
+Create hash reference picked by block.
 
     pick_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { bar => 1 }
+
+## `omit(\%hash, @keys)`
+Create hash reference omitted by special keys.
+
+    omit { } => qw/foo/; # { }
+    omit { foo => 0 } => qw/bar/; # { foo => 0 }
+    omit { foo => 0, bar => 1 } => qw/foo/; # { bar => 1 }
+
+## `omit_by(\%hash, \&predicate)`
+Create hash reference omitted by block.
+
+    omit_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { foo => 0 }
 
 # LICENSE
 
