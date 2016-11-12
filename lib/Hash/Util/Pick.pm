@@ -6,7 +6,12 @@ use warnings;
 our $VERSION = "0.06";
 
 use Exporter qw/import/;
-our @EXPORT_OK = qw/pick pick_by/;
+our @EXPORT_OK = qw/
+    pick
+    pick_by
+    omit
+    omit_by
+/;
 
 use XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);
