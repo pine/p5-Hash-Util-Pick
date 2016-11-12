@@ -27,7 +27,6 @@ Hash::Util::Pick - The non-destructive utilities for picking hash
 
 =head1 SYNOPSIS
 
-    use feature qw/say/;
     use Hash::Util::Pick qw/pick/;
 
     my $src = {
