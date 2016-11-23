@@ -45,6 +45,7 @@ Hash::Util::Pick is the non-destructive utilities for picking hash
 =head1 METHODS
 
 =head2 C<pick(\%hash, @keys)>
+
 Create hash reference picked by special keys.
 
     pick { } => qw/foo/; # { }
@@ -52,11 +53,13 @@ Create hash reference picked by special keys.
     pick { foo => 0, bar => 1 } => qw/foo/; # { foo => 0 }
 
 =head2 C<pick_by(\%hash, \&predicate)>
+
 Create hash reference picked by block.
 
     pick_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { bar => 1 }
 
 =head2 C<omit(\%hash, @keys)>
+
 Create hash reference omitted by special keys.
 
     omit { } => qw/foo/; # { }
@@ -64,6 +67,7 @@ Create hash reference omitted by special keys.
     omit { foo => 0, bar => 1 } => qw/foo/; # { bar => 1 }
 
 =head2 C<omit_by(\%hash, \&predicate)>
+
 Create hash reference omitted by block.
 
     omit_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { foo => 0 }
