@@ -1,5 +1,7 @@
 environment:
-  perl_version: 5.28.0.1
+  matrix:
+    - perl_version: 5.26.2.1
+    - perl_version: 5.28.0.1
 
 init:
   - git config --global core.autocrlf false
