@@ -1,5 +1,5 @@
 init:
-  - git config --global core.autocrlf input
+  - git config --global core.autocrlf false
 
 install:
   - ps: Invoke-WebRequest -Uri http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.msi -OutFile strawberry-perl.msi
