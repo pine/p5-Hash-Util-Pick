@@ -5,6 +5,7 @@ install:
   - ps: Invoke-WebRequest -Uri http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit.msi -OutFile strawberry-perl.msi
   - ps: Start-Process msiexec.exe -ArgumentList @("/package", "strawberry-perl.msi", "/qn", "INSTALLDIR=C:\strawberry") -Wait
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;%PATH%
+  - cpanm --notest --quiet Module::Build
   - cpanm --notest --quiet Carton
   - carton install --without develop
 
