@@ -1,12 +1,12 @@
 environment:
   matrix:
-    - PERL_VERSION: 5.28.0.1
+    - perl_version: 5.28.0.1
 
 init:
   - git config --global core.autocrlf false
 
 install:
-  - ps: Invoke-WebRequest -Uri http://strawberryperl.com/download/%PERL_VERSION%/strawberry-perl-%PERL_VERSION%-64bit.msi -OutFile strawberry-perl.msi
+  - ps: Invoke-WebRequest -Uri http://strawberryperl.com/download/%perl_version%/strawberry-perl-%perl_version%-64bit.msi -OutFile strawberry-perl.msi
   - ps: Start-Process msiexec.exe -ArgumentList @("/package", "strawberry-perl.msi", "/qn", "INSTALLDIR=C:\strawberry") -Wait
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;%PATH%
   - appveyor-retry cpanm --notest --quiet Module::Build::XSUtil
