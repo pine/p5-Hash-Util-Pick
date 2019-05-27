@@ -6,7 +6,7 @@ on test => sub {
     requires 'Test::Exception', '0.43';
 };
 
-on 'develop' => sub {
+on develop => sub {
     requires 'CPAN::Uploader', '0.103012';
     requires 'Minilla', '3.0.4';
     requires 'Perl::Critic', '1.125';
