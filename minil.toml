@@ -5,6 +5,7 @@ authors = ['Pine Mizune']
 license = "mit"
 
 module_maker = 'ModuleBuild'
+markdown_maker = 'Pod::Markdown::Github'
 
 [build]
 build_class = 'builder::MyBuilder'
