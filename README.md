@@ -60,6 +60,10 @@ Create hash reference omitted by block.
 omit_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { foo => 0 }
 ```
 
+# SEE ALSO
+
+- [Lodash Documentation](https://lodash.com/docs/)
+
 # LICENSE
 
 The MIT License (MIT)

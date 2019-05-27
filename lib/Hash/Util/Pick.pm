@@ -72,6 +72,14 @@ Create hash reference omitted by block.
 
     omit_by { foo => 0, bar => 1 } => sub { $_ > 0 }; # { foo => 0 }
 
+=head1 SEE ALSO
+
+=over
+
+=item * L<Lodash Documentation|https://lodash.com/docs/>
+
+=back
+
 =head1 LICENSE
 
 The MIT License (MIT)
