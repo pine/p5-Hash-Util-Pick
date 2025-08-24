@@ -3,9 +3,10 @@ name: test
 on: [push, pull_request]
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
+        os:
+          - ubuntu-latest
         perl-version:
           - "5.10"
           - "5.12"
@@ -24,6 +25,12 @@ jobs:
           - "5.38"
           - "5.40"
           - "5.42"
+        distribution: default
+      include:
+        os: windows-latest
+        perl-version: 5.42
+        distribution: strawberry
+    runs-on: ${{ matrix.os }}
     name: Perl ${{ matrix.perl-version }}
     steps:
       - uses: actions/checkout@v5
@@ -31,6 +38,7 @@ jobs:
         uses: shogo82148/actions-setup-perl@5796a908661aa68fc0a5b8f55c6791af2376d72e # v1.35.0
         with:
           perl-version: ${{ matrix.perl-version }}
+          distribution: ${{ matrix.distribution }}
       - name: Install dependencies
         run: cpanm -nq --installdeps .
       - name: Build module
