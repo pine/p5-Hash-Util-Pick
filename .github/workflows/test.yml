@@ -29,7 +29,7 @@ jobs:
           - default
         include:
           - os: windows-latest
-            perl-version: 5.42
+            perl-version: "5.42"
             distribution: strawberry
     runs-on: ${{ matrix.os }}
     name: Perl ${{ matrix.perl-version }}
