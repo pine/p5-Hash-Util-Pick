@@ -25,7 +25,8 @@ jobs:
           - "5.38"
           - "5.40"
           - "5.42"
-        distribution: default
+        distribution:
+          - default
       include:
         os: windows-latest
         perl-version: 5.42
