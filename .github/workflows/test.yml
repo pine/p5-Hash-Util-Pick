@@ -36,7 +36,7 @@ jobs:
             perl-version: "5.40"
             distribution: strawberry
     runs-on: ${{ matrix.os }}
-    name: Perl ${{ matrix.perl-version }}
+    name: Perl ${{ matrix.perl-version }} (${{ matrix.os }})
     steps:
       - uses: actions/checkout@v5
       - name: Setup perl
