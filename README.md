@@ -14,7 +14,7 @@ my $src = {
     baz => 2,
 };
 
-my $dest = pick $hash => qw/foo bar/;
+my $dest = pick $src => qw/foo bar/;
 # => { foo => 0, bar => 1 }
 ```
 
