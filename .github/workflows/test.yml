@@ -7,8 +7,6 @@ concurrency:
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '0 9 1 * *'
 
 jobs:
   build:
