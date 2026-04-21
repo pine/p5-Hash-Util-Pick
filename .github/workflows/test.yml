@@ -38,6 +38,8 @@ jobs:
           - os: windows-latest
             perl-version: "5.40"
             distribution: strawberry
+          - os: ubuntu-24.04-arm
+            perl-version: "5.42"
     runs-on: ${{ matrix.os }}
     name: Perl ${{ matrix.perl-version }} (${{ matrix.os }})
     steps:
