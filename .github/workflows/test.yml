@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Setup perl
-        uses: shogo82148/actions-setup-perl@5796a908661aa68fc0a5b8f55c6791af2376d72e # v1.35.0
+        uses: shogo82148/actions-setup-perl@5a2f3b681f2e2fa0db6cc52c7608d9916527aa58 # v1.40.0
         with:
           perl-version: ${{ matrix.perl-version }}
           distribution: ${{ matrix.distribution }}
